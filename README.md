@@ -1,90 +1,59 @@
-\# Breast Cancer Analysis \& Prediction 🎗️
+# Breast Cancer Analysis & Prediction Project 🎗️
 
+This project analyzes the **Breast Cancer Wisconsin** dataset using supervised machine learning techniques. The primary objective is to assist medical diagnosis by predicting tumor characteristics and classifying them as malignant or benign.
 
+## 👥 Project Team
+* **Batuhan İNAN**
+* **Emir İnanç ŞEKER**
 
-Bu proje, Meme Kanseri Wisconsin veri setini kullanarak denetimli öğrenme (supervised learning) teknikleriyle analiz ve tahmin yapmayı amaçlamaktadır. Proje kapsamında hem \*\*Regresyon\*\* (tümör yarıçapı tahmini) hem de \*\*Sınıflandırma\*\* (iyi huylu/kötü huylu teşhisi) modelleri geliştirilmiştir.
+## 🎯 Project Objectives
+The project focuses on two main machine learning tasks:
+1.  **Regression Analysis:** Predicting the tumor radius (`radius_mean`) based on other physical features (Texture, Smoothness, Compactness, etc.).
+2.  **Classification Analysis:** Diagnosing the tumor as **Malignant (M)** or **Benign (B)**.
 
+## 🛠️ Technologies & Libraries
+* **Python 3.x**
+* **Pandas & NumPy:** For data cleaning, manipulation, and preprocessing.
+* **Matplotlib & Seaborn:** For exploratory data analysis (EDA) and visualization.
+* **Scikit-learn:** For building and evaluating machine learning models (Regression & Classification).
 
+## 📊 Methodology & Models
 
-\## 👥 Proje Ekibi
+### 1. Classification Task
+To determine whether a tumor is malignant, we implemented and compared three different algorithms using **5-Fold Cross-Validation** to ensure reliability:
 
-\* \*\*Batuhan İNAN\*\*
+| Model | Accuracy Score | Observations |
+|-------|----------------|--------------|
+| **Logistic Regression** | ~94% | Served as a strong baseline; easy to interpret. |
+| **Decision Tree** | ~91% | Showed high variance; prone to overfitting without pruning. |
+| **Random Forest** | **~96%** | **Best Performance.** Successfully captured non-linear relationships and complex feature interactions. |
 
-\* \*\*Emir İnanç ŞEKER\*\*
+### 2. Regression Task
+* **Target:** `radius_mean`
+* **Algorithm:** Linear Regression
+* **Features Used:** Texture, Smoothness, Compactness, Concavity, Symmetry.
+* **Metric:** Mean Squared Error (MSE) and R² Score.
 
+## 🚀 Installation & Usage
 
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/Breast-Cancer-Prediction.git](https://github.com/YOUR_USERNAME/Breast-Cancer-Prediction.git)
+    cd Breast-Cancer-Prediction
+    ```
 
-\## 🎯 Proje Hedefleri
+2.  **Install required dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-1\. \*\*Regresyon:\*\* Fiziksel özelliklere dayanarak tümör yarıçapını (`radius\_mean`) tahmin etmek.
+3.  **Run the Jupyter Notebook:**
+    ```bash
+    jupyter notebook ML_Regression_Classification.ipynb
+    ```
 
-2\. \*\*Sınıflandırma:\*\* Tümörün \*\*Malignant (Kötü Huylu)\*\* veya \*\*Benign (İyi Huylu)\*\* olup olmadığını teşhis etmek.
+## 📝 Conclusion
+Based on our analysis, the **Random Forest** classifier proved to be the most reliable model for this dataset, achieving over 95% accuracy. While Logistic Regression provided good interpretability regarding feature importance, the Random Forest algorithm's ability to handle the complexity of biological data made it the superior choice for clinical diagnostic support in this context.
 
-
-
-\## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
-
-\* \*\*Python\*\*
-
-\* Pandas \& NumPy (Veri Manipülasyonu)
-
-\* Matplotlib \& Seaborn (Veri Görselleştirme)
-
-\* Scikit-learn (Makine Öğrenmesi Modelleri)
-
-
-
-\## 📊 Kullanılan Modeller ve Sonuçlar
-
-
-
-\### 1. Sınıflandırma (Classification) Sonuçları
-
-Malignant (M) veya Benign (B) tahmini için 3 farklı algoritma karşılaştırılmıştır (5-Fold Cross-Validation ile):
-
-
-
-| Model | Başarı Oranı (Accuracy) | Açıklama |
-
-|-------|-------------------------|----------|
-
-| \*\*Logistic Regression\*\* | ~94% | İyi bir temel (baseline) model. |
-
-| \*\*Decision Tree\*\* | ~91% | Yüksek varyans gösterdi. |
-
-| \*\*Random Forest\*\* | \*\*~96%\*\* | \*\*En iyi performans.\*\* Karmaşık özellikleri daha iyi ayırt etti. |
-
-
-
-\### 2. Regresyon (Regression) Analizi
-
-\* \*\*Algoritma:\*\* Linear Regression
-
-\* \*\*Hedef:\*\* `radius\_mean` tahmini
-
-\* \*\*Kullanılan Özellikler:\*\* Texture, Smoothness, Compactness, Concavity, Symmetry.
-
-
-
-\## 🚀 Kurulum ve Çalıştırma
-
-
-
-1\. Projeyi klonlayın:
-
-&nbsp;  ```bash
-
-&nbsp;  git clone \[https://github.com/KULLANICI\_ADIN/Breast-Cancer-Prediction.git](https://github.com/KULLANICI\_ADIN/Breast-Cancer-Prediction.git)
-
-2\. Gerekli kütüphaneleri yükleyin:
-
-Bash
-
-pip install -r requirements.txt
-
-3\. Jupyter Notebook'u çalıştırın:
-
-Bash
-
-jupyter notebook ML_Regression_Classification.ipynb
-
+---
+*This project was developed as part of the Introduction to Machine Learning course.*
