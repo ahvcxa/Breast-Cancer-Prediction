@@ -38,7 +38,7 @@ To determine whether a tumor is malignant, we implemented and compared three dif
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/Breast-Cancer-Prediction.git](https://github.com/YOUR_USERNAME/Breast-Cancer-Prediction.git)
+    git clone [https://github.com/ahvcxa/Breast-Cancer-Prediction.git](https://github.com/ahvcxa/Breast-Cancer-Prediction.git)
     cd Breast-Cancer-Prediction
     ```
 
